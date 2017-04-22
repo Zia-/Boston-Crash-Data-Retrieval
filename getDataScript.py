@@ -39,7 +39,11 @@ def getDataFeatures(urls):
             mode = data['features'][i]['attributes']['Mode']
             fid = data['features'][i]['attributes']['FID']
             key, value = ['lat','lng','date','time','count','incident','mode','fid'], [lat,lng,date,time,count,incident,mode,fid]
-            dataList.append(dict(zip(key,value)))
+            if dateFormat > datetime.datetime(2016, 01, 01) and dateFormat < datetime.datetime(2017, 01, 01):
+                # Data for 2016
+                dataList.append(dict(zip(key,value)))
+            else:
+                pass
     dataList = []
     for i in range(len(urls)):
         formatJson(json.loads(urllib2.urlopen(urls[i]).read()))

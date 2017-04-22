@@ -8,5 +8,5 @@ Methodology To Obtain Vector Data and Make it Prettier ----
 3. It should be noted that we are asked to obtain "Collision Data", and so we will be using "crash analysis" dataset and not the "all_fatalities____" or "all_injuries____". ![Screenshot](1.png)
 4. Going to the respective ArcGIS.com My Map page gave us the url which could be used to pull out vector data in json format. ![Screenshot](2.png)
 5. Once we had this url all we did was to generate custom url to cover all "objectIds" for 9229 features.
-6. Now run the script [getDataScript.py](https://github.com/Zia-/Boston-Crash-Data-Retrieval/blob/master/getDataScript.py) with proper arguments to download and format data according to taste.
+6. Now run the script [getDataScript.py](https://github.com/Zia-/Boston-Crash-Data-Retrieval/blob/master/getDataScript.py) with proper arguments to download and format data according to taste. Only data from 2016 is exported.
 7. Data visualised in QGIS. ![Screenshot](3.png)
